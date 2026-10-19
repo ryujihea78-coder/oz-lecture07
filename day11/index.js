@@ -19,3 +19,53 @@ let num2 = 10;
 let b = ++num2; // num2 = 11, b = 11
 console.log("b :", b);
 console.log("num2 :", num2);
+
+//값 합산 +=
+let total = 0;
+total += 12000; // 티셔츠
+total += 3000; // 배송비
+console.log(total); // 15000
+
+let message = "안녕";
+message += "하세요";
+console.log(message); // 안녕하세요
+
+//비교연산자
+console.log(10 == "10"); // true, 값만 비교
+console.log(10 === "10"); // false, 값과 타입 모두 비교
+console.log(0 == ""); // true, 값만 비교
+console.log(0 === ""); // false, 값과 타입 모두 비교
+console.log(null == undefined); // true, 값만 비교
+console.log(null === undefined); // false, 값과 타입 모두 비교
+
+//논리연산자자
+const age = 25;
+const hasTicket = true;
+
+condole.log(age >= 20 && hasTicket); // true, 둘 다 참이면 참
+console.log(age < 20 || hasTicket); // true, 둘 중 하나만 참이면 참
+console.log(!hasTicket); // false, 뒤집기
+
+// 괄호로 묶는 범위에 따라 결과가 다름
+console.log(!true && false); // false,
+console.log(!(true && false)); // true,
+
+console.log(!age > 20, hasTicket);
+console.log("age : ", age);
+
+// 조건문
+const numIf = 5; // => 4로 바꿔보세요
+if (numIf % 2 === 0) {
+  console.log("짝수입니다.");
+} else {
+    console.log("홀수입니다.");
+}
+
+const numIf2 = 0;
+if (numIf2 > 0) {
+  console.log("양수입니다.");
+} else if (numIf2 < 0) {
+  console.log("음수입니다.");
+} else {
+  console.log("0입니다.");
+}
