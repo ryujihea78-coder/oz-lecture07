@@ -42,7 +42,7 @@ console.log(null === undefined); // false, 값과 타입 모두 비교
 const age = 25;
 const hasTicket = true;
 
-condole.log(age >= 20 && hasTicket); // true, 둘 다 참이면 참
+console.log(age >= 20 && hasTicket); // true, 둘 다 참이면 참
 console.log(age < 20 || hasTicket); // true, 둘 중 하나만 참이면 참
 console.log(!hasTicket); // false, 뒤집기
 
@@ -69,3 +69,66 @@ if (numIf2 > 0) {
 } else {
   console.log("0입니다.");
 }
+
+const score = 95;
+if (score >= 90 && score <= 100) {
+  console.log("A학점입니다.");
+}
+
+const day = "토";
+if (day === "토" || day === "일") {
+  console.log("주말입니다.");
+}
+
+// 중첩 if문
+const isLoggedIn = true;
+const role = "admin";
+if (isLoggedIn) {
+  console.log("로그인 O");
+  if (role === "admin") {
+    console.log("관리자 페이지로 이동");
+  }
+} else {
+  console.log("로그인 하기");
+}
+
+// switch문
+const food = "사과"; // => "당근", "책상"으로 바꿔보세요
+switch (food) {
+  case "사과":
+    console.log("과일");
+    break;
+  case "당근":
+    console.log("채소");
+    break;
+  default:
+    console.log("과일도 채소도 아닙니다.");
+}
+
+// 삼항연산자
+let result;
+let scoreThird = 55; // => 75로 바꿔보세요
+
+// if로 표현하면
+if (scoreThird >= 60) {
+  result = "합격";
+} else {
+  result = "불합격";
+}
+console.log(result);
+
+// 삼항연산자로 표현하면
+result = scoreThird >= 60 ? "합격" : "불합격";
+console.log(result);
+
+// if의 괄호 생략
+if (scoreThird >= 90) console.log("A학점입니다.");
+
+if (scoreThird >= 90) {
+  console.log("A학점입니다.");
+  console.log("축하합니다.");
+}
+
+// if의 괄호 생략 시, 한 줄만 실행됨
+if (scoreThird >= 90) console.log("A학점입니다.");
+console.log("축하합니다.");
