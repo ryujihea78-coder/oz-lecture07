@@ -19,7 +19,7 @@ const printDan = function (dan) {
   }
 };
 
-printDan(7);
+printDan(8);
 
 // 3. 점수 목록의 합계 — 화살표 함수 (배열은 DAY 13에서 자세히 봅니다)
 const scores = [80, 95, 70, 55];
@@ -48,3 +48,23 @@ const countPass = (list) => {
 };
 
 console.log(`60점 이상 ${countPass(scores)}명`);
+
+
+function sum(num1, num2) {
+  if (typeof num1 !== "number" || typeof num2 !== "number") {
+    return;
+  }
+  return num1 + num2;
+}
+
+const double = (n) => n * 2;
+
+function greet(name = "회원") {
+  return `${name}님, 안녕하세요`;
+}
+
+console.log(sum(10, 20));
+console.log(sum("a", "b"));
+console.log(double(sum(1, 2)));
+console.log(greet());
+console.log(greet("김오즈"));
